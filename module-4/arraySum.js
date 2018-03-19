@@ -7,3 +7,15 @@
  * @param {Array} elements
  * @returns {number} summary of all integers or 0 in other cases
  */
+
+function arraySum(arr) {
+    if (arr.length === 1) {
+        return 0;
+    }
+    return arr.reduce((a, b) => { 
+        return a + b; 
+    }, 0);
+
+}
+
+module.exports = arraySum;
