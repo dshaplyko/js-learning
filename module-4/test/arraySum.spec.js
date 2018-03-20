@@ -4,7 +4,7 @@ const arraySum = require('../arraySum');
 const expect = require('chai').expect;
 const testData = require('./arraySum.json');
 
-describe.only('Module 4 - arraySum', () => {
+describe('Module 4 - arraySum', () => {
     it('should be a function', () => {
         expect(arraySum).to.be.instanceOf(Function);
     });

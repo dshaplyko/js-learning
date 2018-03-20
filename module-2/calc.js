@@ -10,11 +10,6 @@ class Calc {
         return this;
     }
 
-    substract(n) {
-        this.v *= n;
-        return this;
-    }
-
     minus(n) {
         this.v -= n;
         return this;

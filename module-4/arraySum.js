@@ -9,9 +9,13 @@
  */
 
 function arraySum(arr) {
-    if (arr.length === 1) {
+    if (arr.length === undefined) {
         return 0;
     }
+    arr = arr.filter(c => {
+        return typeof c === 'number'
+    })
+    console.log(arr);
     return arr.reduce((a, b) => { 
         return a + b; 
     }, 0);

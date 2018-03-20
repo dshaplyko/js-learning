@@ -34,7 +34,7 @@ describe.only('calc', () => {
         expect(c.v).to.equal(8);
     });
 
-    it('should support minus operation', () => {
+    it('should support substract operation', () => {
         // Given
         let c = calc(3);
         // When
@@ -52,11 +52,11 @@ describe.only('calc', () => {
         expect(c.v).to.equal(2);
     });
 
-    it('should support substract operation', () => {
+    it('should support times operation', () => {
         // Given
         let c = calc(3);
         // When
-        c = c.substract(10);
+        c = c.times(10);
         // Then
         expect(c.v).to.equal(30);
     });

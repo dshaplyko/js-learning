@@ -15,11 +15,15 @@ const TO_IGNORE = '!@#$%^&*()_+';
  *                    false otherwise
  */
 
- function arraySorted(arr) {
+ function arraySorted(arr, ignore) {
+    ignore = '?!@#$%^&*()_+';
 
     for (let i = 0; i < arr.length; ++i) {
         if (typeof arr[i] === 'string') {
-            arr[i] = arr[i].replace(/\s/g, "").replace('!', "").replace('?', "");
+            arr[i] = arr[i].replace(/\s/g, "");
+            arr[i] = arr[i].split('').filter(c => {
+                return ignore.indexOf(c) === -1;
+            }).join('').toLowerCase();
             console.log(arr[i]);
         }
     }
